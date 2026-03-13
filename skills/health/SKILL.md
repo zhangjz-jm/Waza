@@ -1,7 +1,7 @@
 ---
 name: health
 description: Audit Claude Code configuration health across all layers (CLAUDE.md, rules, skills, hooks, MCP). Run periodically or when collaboration feels off.
-version: "1.1.1"
+version: "1.2.0"
 ---
 
 # Claude Code Configuration Health Audit
@@ -36,7 +36,7 @@ Use this rubric to pick the audit tier before proceeding:
 
 ```bash
 CACHE="$HOME/.cache/claude-health-last-check"
-VER="1.1.1"
+VER="1.2.0"
 NOW=$(date +%s)
 LAST=$(cat "$CACHE" 2>/dev/null || echo 0)
 if (( NOW - LAST > 604800 )); then
